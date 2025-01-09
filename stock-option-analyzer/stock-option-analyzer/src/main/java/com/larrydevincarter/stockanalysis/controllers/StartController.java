@@ -1,7 +1,7 @@
 package com.larrydevincarter.stockanalysis.controllers;
 
-import com.larrydevincarter.stockanalysis.dtos.AlphaVantageCompanyOverviewReturnDto;
-import com.larrydevincarter.stockanalysis.services.AlphaVantageAPIService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.larrydevincarter.stockanalysis.dtos.AlphaVantageIncomeStatementReturnDto;
 import com.larrydevincarter.stockanalysis.services.StartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,7 +18,7 @@ public class StartController {
     private StartService startService;
 
     @GetMapping
-    public AlphaVantageCompanyOverviewReturnDto startProgram() {
+    public AlphaVantageIncomeStatementReturnDto startProgram() throws JsonProcessingException {
         return startService.start();
     }
 }

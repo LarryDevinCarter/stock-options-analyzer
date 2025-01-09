@@ -1,7 +1,10 @@
 package com.larrydevincarter.stockanalysis.services;
 
-import com.larrydevincarter.stockanalysis.dtos.AlphaVantageCompanyOverviewReturnDto;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.larrydevincarter.stockanalysis.dtos.AlphaVantageIncomeStatementReturnDto;
 
 public interface StartService {
-    AlphaVantageCompanyOverviewReturnDto start();
+
+    //This method return Company Overview Data
+    AlphaVantageIncomeStatementReturnDto start() throws JsonProcessingException;
 }
